@@ -73,11 +73,8 @@ public class Main {
 	                System.out.println("Total de la compra: $" + carrito.calcularTotal());
 	            }
 	        }
-
-	        System.out.println("Gracias por usar Green & Click!");
-	        sc.close();
 	    }
-	}
+	
 
 
 
