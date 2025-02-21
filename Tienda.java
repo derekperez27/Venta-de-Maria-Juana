@@ -34,6 +34,36 @@ public class Tienda {
         }
         return resultado;
     }
+
+    public Producto[] ordenarPorPrecioAscendente() {
+        Producto[] ordenado = productos.clone(); // Se copia el array original
+        for (int i = 0; i < ordenado.length - 1; i++) {
+            for (int j = 0; j < ordenado.length - 1 - i; j++) {
+                if (ordenado[j].precio > ordenado[j + 1].precio) {
+                    Producto temp = ordenado[j];
+                    ordenado[j] = ordenado[j + 1];
+                    ordenado[j + 1] = temp;
+                }
+            }
+        }
+        return ordenado;
+    }
+
+    public Producto[] ordenarPorPrecioDescendente() {
+        Producto[] ordenado = productos.clone(); // Se copia el array original
+        for (int i = 0; i < ordenado.length - 1; i++) {
+            for (int j = 0; j < ordenado.length - 1 - i; j++) {
+                if (ordenado[j].precio < ordenado[j + 1].precio) {
+                    Producto temp = ordenado[j];
+                    ordenado[j] = ordenado[j + 1];
+                    ordenado[j + 1] = temp;
+                }
+            }
+        }
+        return ordenado;
+    }
 }
+
+
 
 
